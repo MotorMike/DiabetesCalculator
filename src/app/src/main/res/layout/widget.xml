@@ -13,7 +13,7 @@
                 android:id="@+id/button36"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:text="-" />
 
         <TextView
@@ -27,7 +27,7 @@
                 android:id="@+id/button44"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
+                android:layout_weight="0.5"
                 android:text="+" />
 
         <TextView
@@ -47,9 +47,9 @@
         <Button
                 android:id="@+id/button5"
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="Button" />
+                android:background="@drawable/syringe2" />
     </LinearLayout>
 
 </LinearLayout>
