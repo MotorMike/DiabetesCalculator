@@ -38,10 +38,10 @@ class MainActivity : AppCompatActivity() {
 
     private fun convert(direction: String) {
         if (direction == "fromMg") {
-            val value = Integer.parseInt(mgInput.text.toString()) / 18
+            val value = mgInput.text.toString().toFloat() / 18
             mmlInput.setText( value.toString())
         } else {
-            val value = Integer.parseInt(mmlInput.text.toString()) * 18
+            val value = mmlInput.text.toString().toFloat() * 18
             mgInput.setText( value.toString())
         }
     }
