@@ -1,70 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
 
-    <TableLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent">
+    <EditText
+            android:id="@+id/timeRemainingView"
+            android:layout_width="0dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="24dp"
+            android:clickable="true"
+            android:ems="10"
+            android:inputType="none"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/timerStartBtn"
+            app:layout_constraintTop_toBottomOf="@+id/timerBanner" />
 
-        <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+    <TextView
+            android:id="@+id/timerBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="260dp"
+            android:text="Timer"
+            app:layout_constraintStart_toStartOf="@+id/timeLabel"
+            app:layout_constraintTop_toBottomOf="@+id/converterBanner" />
 
-            <TextView
-                    android:id="@+id/textView3"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Unit Converter" />
-        </TableRow>
+    <TextView
+            android:id="@+id/mmolLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:text="mmol/L "
+            app:layout_constraintBaseline_toBaselineOf="@+id/mmlInput"
+            app:layout_constraintEnd_toStartOf="@+id/mmlInput" />
 
-        <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+    <EditText
+            android:id="@+id/mmlInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:inputType="none|number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/mgInput" />
 
-            <TextView
-                    android:id="@+id/mgLabel"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="mg/dL" />
+    <TextView
+            android:id="@+id/timeLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:text="Time Remaining"
+            app:layout_constraintEnd_toStartOf="@+id/timeRemainingView"
+            app:layout_constraintStart_toEndOf="@+id/timerStartBtn"
+            app:layout_constraintTop_toBottomOf="@+id/timerBanner" />
 
-            <EditText
-                    android:id="@+id/mgInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="number|numberDecimal"
-                    android:phoneNumber="false" />
+    <TextView
+            android:id="@+id/mgLabel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="65dp"
+            android:text="mg/dL"
+            app:layout_constraintBottom_toTopOf="@+id/mmolLabel"
+            app:layout_constraintEnd_toStartOf="@+id/mgInput"
+            app:layout_constraintTop_toTopOf="@+id/converterBanner" />
 
-        </TableRow>
+    <TextView
+            android:id="@+id/converterBanner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="48dp"
+            android:text="Converter"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-        <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" >
+    <EditText
+            android:id="@+id/mgInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:layout_marginEnd="24dp"
+            android:ems="10"
+            android:inputType="number|numberDecimal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-            <TextView
-                    android:id="@+id/mmolLable"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="mmol/L " />
+    <Button
+            android:id="@+id/timerStartBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="32dp"
+            android:layout_marginTop="23dp"
+            android:layout_marginEnd="183dp"
+            android:text="2 Hours"
+            app:layout_constraintEnd_toStartOf="@+id/timeRemainingView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/timerBanner" />
 
-            <EditText
-                    android:id="@+id/mmlInput"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:ems="10"
-                    android:inputType="none|number|numberDecimal" />
-
-        </TableRow>
-
-        <TableRow
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
-    </TableLayout>
+    <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="20dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
